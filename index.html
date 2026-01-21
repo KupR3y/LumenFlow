@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ЛюменФлоу — Умное освещение</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Главное меню">
+      <div class="logo">ЛюменФлоу</div>
+      <ul class="nav-links">
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#process">Как мы работаем</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+      <div class="nav-ctas">
+        <button class="btn ghost" id="watch-projects">Смотреть проекты</button>
+        <button class="btn primary" id="get-quote">Получить расчет</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <h1 class="hero-title">Свет, который делает интерьер живым</h1>
+        <p class="hero-sub">Проектируем и устанавливаем умное освещение: сценарии, подсветка, управление со смартфона. Под ключ за 7–14 дней.</p>
+
+        <div class="hero-ctas">
+          <button class="btn primary" id="cta-get-quote">Получить расчет</button>
+          <button class="btn ghost" id="cta-watch-projects">Смотреть проекты</button>
+        </div>
+
+        <ul class="trust-list" aria-hidden="false">
+          <li>Проект + монтаж + настройка</li>
+          <li>Сценарии: утро/вечер/кино/гости</li>
+          <li>Гарантия 2 года</li>
+        </ul>
+      </div>
+
+      <div class="hero-media" aria-hidden="false">
+        <!-- large atmospheric image; replace with a video or gradient if desired -->
+        <img src="assets/hero.jpg" alt="Атмосферный интерьер с тёплым подсветом">
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem → Solution -->
+  <section class="reveal problems container" id="problems" aria-label="Проблемы и решения">
+    <h2 class="section-title">Проблема → Решение</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Темно в углах</h3>
+        <p class="muted">→ равномерный свет без “плоской” люстры</p>
+      </article>
+      <article class="card">
+        <h3>Слишком ярко вечером</h3>
+        <p class="muted">→ тёплые мягкие сценарии в один тап</p>
+      </article>
+      <article class="card">
+        <h3>Сложно управлять</h3>
+        <p class="muted">→ кнопки, датчики, голос, приложение</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Services / Packages -->
+  <section class="reveal services container" id="services" aria-label="Услуги">
+    <h2 class="section-title">Пакеты</h2>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Start</h3>
+        <p class="price-sub">Сценарии для 1–2 комнат</p>
+        <ul class="includes">
+          <li>Проект</li>
+          <li>Подбор оборудования</li>
+        </ul>
+        <div class="meta">
+          <span>Срок: 7–10 дней</span>
+          <span class="from">Цена: рассчитывается индивидуально</span>
+        </div>
+        <button class="btn primary request-price" data-package="Start">Запросить стоимость</button>
+      </div>
+
+      <div class="price-card featured">
+        <h3>Home</h3>
+        <p class="price-sub">Квартира/дом под ключ</p>
+        <ul class="includes">
+          <li>Проект</li>
+          <li>Монтаж</li>
+          <li>Настройка</li>
+        </ul>
+        <div class="meta">
+          <span>Срок: 10–14 дней</span>
+          <span class="from">Цена: рассчитывается индивидуально</span>
+        </div>
+        <button class="btn primary request-price" data-package="Home">Запросить стоимость</button>
+      </div>
+
+      <div class="price-card">
+        <h3>Pro</h3>
+        <p class="price-sub">Коммерческие пространства</p>
+        <ul class="includes">
+          <li>Атмосфера</li>
+          <li>Акценты и витрины</li>
+        </ul>
+        <div class="meta">
+          <span>Срок: по согласованию</span>
+          <span class="from">Цена: рассчитывается индивидуально</span>
+        </div>
+        <button class="btn primary request-price" data-package="Pro">Запросить стоимость</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="reveal portfolio container" id="portfolio" aria-label="Портфолио">
+    <h2 class="section-title">Портфолио</h2>
+    <div class="gallery">
+      <!-- Six clickable project cards -->
+      <button class="proj-card" data-index="0">
+        <img src="assets/portfolio-1.jpg" alt="Проект - Гостиная">
+        <div class="proj-meta">
+          <strong>Квартира — Гостиная</strong>
+          <div class="tags">скрытая подсветка · умные сценарии</div>
+        </div>
+      </button>
+
+      <button class="proj-card" data-index="1">
+        <img src="assets/portfolio-2.jpg" alt="Проект - Спальня">
+        <div class="proj-meta">
+          <strong>Квартира — Спальня</strong>
+          <div class="tags">акцентный свет · сценарии</div>
+        </div>
+      </button>
+
+      <button class="proj-card" data-index="2">
+        <img src="assets/portfolio-3.jpg" alt="Проект - Ресторан">
+        <div class="proj-meta">
+          <strong>Коммерция — Ресторан</strong>
+          <div class="tags">акценты · витрины</div>
+        </div>
+      </button>
+
+      <button class="proj-card" data-index="3">
+        <img src="assets/portfolio-4.jpg" alt="Проект - Офис">
+        <div class="proj-meta">
+          <strong>Коммерция — Офис</strong>
+          <div class="tags">скрытая подсветка · комфорт</div>
+        </div>
+      </button>
+
+      <button class="proj-card" data-index="4">
+        <img src="assets/portfolio-5.jpg" alt="Проект - Кухня">
+        <div class="proj-meta">
+          <strong>Квартира — Кухня</strong>
+          <div class="tags">подсветка · сценарии</div>
+        </div>
+      </button>
+
+      <button class="proj-card" data-index="5">
+        <img src="assets/portfolio-6.jpg" alt="Проект - Витрина">
+        <div class="proj-meta">
+          <strong>Коммерция — Витрина</strong>
+          <div class="tags">акцентный свет · витрины</div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- Portfolio Modal -->
+  <div id="proj-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть">✕</button>
+      <div class="modal-body">
+        <div class="modal-gallery" id="modal-gallery"></div>
+        <div class="modal-desc" id="modal-desc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Process -->
+  <section class="reveal process container" id="process" aria-label="Как мы работаем">
+    <h2 class="section-title">Как мы работаем</h2>
+    <ol class="process-list">
+      <li>
+        <div class="icon">📋</div>
+        <strong>Бриф и замер</strong>
+        <p class="muted">онлайн/офлайн</p>
+      </li>
+      <li>
+        <div class="icon">💡</div>
+        <strong>Концепция света и сценарии</strong>
+      </li>
+      <li>
+        <div class="icon">🧾</div>
+        <strong>Подбор оборудования + смета</strong>
+      </li>
+      <li>
+        <div class="icon">🔧</div>
+        <strong>Монтаж и аккуратная установка</strong>
+      </li>
+      <li>
+        <div class="icon">🔌</div>
+        <strong>Настройка + обучение + гарантия</strong>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Scenarios interactive -->
+  <section class="reveal scenarios container" id="scenarios" aria-label="Сценарии">
+    <h2 class="section-title">Сценарии</h2>
+    <div class="scenario-panel">
+      <div class="scenario-media" id="scenario-media" aria-hidden="false">
+        <!-- gradient background will change by JS -->
+      </div>
+      <div class="scenario-controls">
+        <div class="toggles">
+          <button class="scenario-btn active" data-scenario="morning">Утро</button>
+          <button class="scenario-btn" data-scenario="evening">Вечер</button>
+          <button class="scenario-btn" data-scenario="movie">Кино</button>
+          <button class="scenario-btn" data-scenario="guests">Гости</button>
+        </div>
+        <div class="scenario-info" id="scenario-info">
+          <div><strong>Темп.</strong> 2700K</div>
+          <div><strong>Яркость</strong> 40%</div>
+          <div><strong>Зоны</strong> Гостиная, подсветка полок</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="reveal testimonials container" id="reviews" aria-label="Отзывы">
+    <h2 class="section-title">Отзывы</h2>
+    <div class="test-list">
+      <blockquote class="testimonial">
+        <p>“Стало уютнее — сценарии реально используются.”</p>
+        <footer>Марина, Москва — квартира</footer>
+      </blockquote>
+
+      <blockquote class="testimonial">
+        <p>“Монтаж аккуратный, всё работает как обещали.”</p>
+        <footer>Алексей, Казань — дом</footer>
+      </blockquote>
+
+      <blockquote class="testimonial">
+        <p>“Клиенты в магазине стали дольше задерживаться у витрин.”</p>
+        <footer>Ольга, Санкт‑Петербург — коммерция</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="reveal faq container" id="faq" aria-label="Вопросы и ответы">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Сколько длится проект?</summary>
+        <div class="muted">От 7 до 14 дней в среднем, зависит от объёма.</div>
+      </details>
+
+      <details>
+        <summary>Можно ли без капитального ремонта?</summary>
+        <div class="muted">Да, большинство сценариев устанавливаются без демонтажа.</div>
+      </details>
+
+      <details>
+        <summary>Какие бренды/протоколы поддерживаются?</summary>
+        <div class="muted">Мы работаем с Zigbee, Z-Wave, Wi‑Fi и ведущими брендами по запросу.</div>
+      </details>
+
+      <details>
+        <summary>Что с гарантией?</summary>
+        <div class="muted">Гарантия 2 года на монтаж и настройки.</div>
+      </details>
+
+      <details>
+        <summary>Можно ли управлять без интернета?</summary>
+        <div class="muted">Да — локальное управление, кнопки и шлюзы сохраняют сценарии.</div>
+      </details>
+
+      <details>
+        <summary>Как рассчитывается стоимость?</summary>
+        <div class="muted">По проекту: площадь, зоны, оборудование и сложность монтажа.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Final CTA + Form -->
+  <section class="reveal final-cta container" id="contacts" aria-label="Форма заявки">
+    <div class="cta-inner">
+      <div class="cta-left">
+        <h2>Покажем, как ваш интерьер заиграет светом</h2>
+        <p class="muted">Ответим в течение рабочего дня</p>
+      </div>
+      <form id="lead-form" class="lead-form" novalidate>
+        <label>
+          Имя
+          <input type="text" name="name" required>
+        </label>
+
+        <label>
+          Телефон / Telegram
+          <input type="tel" name="phone" id="phone" placeholder="+7 (___) ___-__-__" required>
+        </label>
+
+        <label>
+          Тип объекта
+          <select name="type" required>
+            <option value="">Выберите</option>
+            <option>Квартира</option>
+            <option>Дом</option>
+            <option>Коммерция</option>
+          </select>
+        </label>
+
+        <label>
+          Комментарий
+          <textarea name="comment" rows="3"></textarea>
+        </label>
+
+        <label class="policy">
+          <input type="checkbox" name="policy" required>
+          Согласен(а) с политикой конфиденциальности
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Thank you modal -->
+  <div id="thanks-modal" class="modal" aria-hidden="true">
+    <div class="modal-content small">
+      <button class="modal-close" aria-label="Закрыть">✕</button>
+      <div class="modal-body center">
+        <h3>Спасибо!</h3>
+        <p>Мы ответим в течение рабочего дня.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">ЛюменФлоу</div>
+          <p class="muted">Проектируем и устанавливаем умное освещение</p>
+        </div>
+
+        <div class="footer-contacts">
+          <a class="footer-link" href="tel:+70001234567">+7 (000) 123‑45‑67</a>
+          <a class="footer-link" href="mailto:info@lumenflow.example">info@lumenflow.example</a>
+
+          <div class="footer-socials" aria-label="Социальные сети">
+            <a class="social-icon" aria-label="Telegram" href="https://t.me/lumenflow" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" fill="currentColor"><path d="M9.04 15.53 8.86 19c.27 0 .39-.12.53-.26l1.27-1.23 2.64 1.93c.48.27.82.13.95-.44l1.72-8.08c.15-.71-.27-.99-.74-.81L5.42 12.9c-.67.27-.66.64-.11.81l2.77.86 6.43-4.06c.3-.2.58-.09.35.11z"/></svg>
+            </a>
+            <a class="social-icon" aria-label="VK" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 13.5a3 3 0 0 1 0-6h3a3 3 0 1 1 0 6h-1"/><path d="M13.5 10.5a3 3 0 0 1 0 6h-3a3 3 0 1 1 0-6h1"/></svg>
+            </a>
+            <a class="social-icon" aria-label="YouTube" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" fill="currentColor"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.26 5 12 5 12 5s-6.26 0-7.82.42A2.5 2.5 0 0 0 2.42 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.76 1.77C5.74 19 12 19 12 19s6.26 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.42-4.81ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <a class="footer-link" href="#" id="privacy-link">Политика конфиденциальности</a>
+        <div class="muted">© 2026 ЛюменФлоу</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy modal -->
+  <div id="privacy-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть">✕</button>
+      <div class="modal-body">
+        <h3>Политика конфиденциальности</h3>
+        <p class="muted">Здесь будет текст политики (заглушка).</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
